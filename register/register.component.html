@@ -1,0 +1,26 @@
+<h5 text-align="center">FORM</h5>
+<form  (ngSubmit)="submit()" >
+<div class="form-group">
+  <label for="name">Name</label>
+  <input type="text" class="form-control"  name="name"
+         required
+         [(ngModel)]="userModel.name" [formControl]="nameFormControl">
+</div>
+
+<div class="form-group">
+  <label for="email">Email</label>
+  <input type="text"  class="form-control" name="email"
+         [(ngModel)]="userModel.email"  [formControl]="emailFormControl">
+</div>
+
+<!-- <div class="form-group">
+  <label for="password">Password</label>
+  <input type="text"  class="form-control" name="password"
+         [(ngModel)]="userModel.password"  [formControl]="passwordFormControl">
+</div> -->
+<br>
+<button class="btn btn-primary" type="submit" (click)="register()">Submit</button>
+</form>
+
+<br><br>
+
